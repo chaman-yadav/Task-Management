@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- <h1 class="text-center">Task Management</h1>-->
+        
+        <!-- CRUD Application Card -->
+        <div class="card mb-4">
+            <div class="card-header text-center">
+                <h2>CRUD Application</h2> 
+            </div>
+            <div class="card-body">
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="taskTitle">Task Title</label>
+                        <input type="text" class="form-control" id="taskTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="taskDescription">Task Description</label>
+                        <textarea class="form-control" id="taskDescription" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+                    <button type="button" class="btn btn-secondary" id="resetBtn">Reset</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Display Tasks Card -->
+        <div class="card">
+            <div class="card-header text-center">
+              <h2>Display Tasks</h2> 
+                
+            </div>
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search Tasks" id="searchInput">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="searchBtn">Search</button>
+                    </div>
+                </div>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="text-center">
+                            <th scope="col">Index</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskList">
+                        <!-- Tasks will be rendered here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
