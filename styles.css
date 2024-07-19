@@ -1,6 +1,7 @@
 /* General Styles */
 body {
-  background: linear-gradient(to right, #3a0ca3, #2d2d2d);
+  background: radial-gradient(circle, #000000, #3c3c3c);
+  /* background: linear-gradient(to right, #000000, #fafafa); */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
   margin: 0;
@@ -14,6 +15,7 @@ body {
   background-color: #ffffff;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
   border-radius: 16px;
+  color: #2d2d2d;
 }
 
 h1, h2 {
@@ -21,6 +23,7 @@ h1, h2 {
   color: #ffffff;
   text-align: center;
   margin-bottom: 30px;
+  
   background: linear-gradient(to right, #7209b7, #3a0ca3);
   padding: 15px;
   border-radius: 8px;
@@ -45,8 +48,8 @@ form {
   border-radius: 8px;
   padding: 10px;
   border: 2px solid #7209b7;
-  background-color: #444;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #2d2d2d;
 }
 
 #submitBtn, #resetBtn {
@@ -58,7 +61,7 @@ form {
 
 #submitBtn {
   background-color: #7209b7;
-  border-color: #000000;
+  border-color: #7209b7;
   color: #ffffff;
 }
 
@@ -85,15 +88,15 @@ form {
 
 #searchInput {
   border-radius: 8px;
-  border: 2px solid #000000;
+  border: 2px solid #7209b7;
   background-color: #ffffff;
-  color: #000000;
+  color: #2d2d2d;
 }
 
 .input-group .btn-outline-secondary {
   border-radius: 8px;
-  border: 2px solid #000000;
-  color: #000000;
+  border: 2px solid #7209b7;
+  color: #7209b7;
 }
 
 .input-group .btn-outline-secondary:hover {
@@ -106,11 +109,12 @@ form {
 table {
   width: 100%;
   margin-top: 20px;
+  background-color: #ffffff;
 }
 
 thead {
-  background-color: #7209b7;
-  color: #ffffff;
+  background-color: #3a0ca3; /* Purple background for table header */
+  color: #ffffff; /* White text color for readability */
 }
 
 th, td {
@@ -119,8 +123,8 @@ th, td {
   border-bottom: 1px solid #dee2e6;
 }
 
-tr:nth-child(even) {
-  background-color: #333;
+tr {
+  background-color: #ffffff;
 }
 
 .btn-warning {
@@ -146,6 +150,11 @@ tr:nth-child(even) {
   background-color: #9a1922;
   transform: scale(1.1);
 }
+
+
+
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
