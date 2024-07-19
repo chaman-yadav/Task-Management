@@ -41,17 +41,49 @@ document.addEventListener('DOMContentLoaded', () => {
       taskList.innerHTML = '';
       filteredTasks.forEach((task, index) => {
           const row = document.createElement('tr');
-          row.innerHTML = `
-              <th scope="row">${index + 1}</th>
-              <td>${task.title}</td>
-              <td>${task.description}</td>
-              <td>
-                  <button class="btn btn-sm btn-warning" onclick="editTask(${index})">Edit</button>
-              </td>
-              <td>
-                  <button class="btn btn-sm btn-danger" onclick="deleteTask(${index})">Delete</button>
-              </td>
-          `;
+            row.innerHTML = `
+            <th scope="row">${index + 1}</th>
+            <td>${task.title}</td>
+            <td>${task.description}</td>
+            <td>
+                <button style="
+                    background-color: #4CAF50; /* Green */
+                    color: white; 
+                    border: none; 
+                    padding: 5px 10px; 
+                    text-align: center; 
+                    text-decoration: none; 
+                    display: inline-block; 
+                    font-size: 12px; 
+                    margin: 2px 1px; 
+                    cursor: pointer; 
+                    border-radius: 4px;
+                    transition: background-color 0.3s;
+                " 
+                onmouseover="this.style.backgroundColor='#45a049'" 
+                onmouseout="this.style.backgroundColor='#4CAF50'" 
+                onclick="editTask(${index})">Edit</button>
+            </td>
+            <td>
+                <button style="
+                    background-color: #f44336; /* Red */
+                    color: white; 
+                    border: none; 
+                    padding: 5px 10px; 
+                    text-align: center; 
+                    text-decoration: none; 
+                    display: inline-block; 
+                    font-size: 12px; 
+                    margin: 2px 1px; 
+                    cursor: pointer; 
+                    border-radius: 4px;
+                    transition: background-color 0.3s;
+                " 
+                onmouseover="this.style.backgroundColor='#d32f2f'" 
+                onmouseout="this.style.backgroundColor='#f44336'" 
+                onclick="deleteTask(${index})">Delete</button>
+            </td>
+        `;
           taskList.appendChild(row);
       });
   }
