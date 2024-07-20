@@ -5,7 +5,7 @@ Welcome to the Task Management Application! This application allows you to creat
 ## Live Demo
 
 Check out the live application [here](https://task-management-ivory-alpha.vercel.app/).
-
+![Preview](preview.png)
 ## Features
 
 - **Create Tasks**: Add new tasks with a title and description.
